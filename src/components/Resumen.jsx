@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 import { primerMayuscula } from '../helper';
 
 const ContenedorResumen = styled.div `
@@ -26,6 +27,10 @@ if (marca === '' || year === '' || plan === '') return null;
         </ul>
         </ContenedorResumen>
     );
+}
+
+Resumen.propTypes = {
+    datos: PropTypes.object.isRequired
 }
 
 export default Resumen;
